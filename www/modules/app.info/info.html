@@ -1,0 +1,29 @@
+<ion-view view-title="{{info.name}}">
+    <ion-content>
+        <div style="margin: 20px; text-align: center;">
+            <div ng-bind-html="info.backdrop_path"></div>
+            </br>
+            {{info.overview}}
+        </div>
+
+        <div style="margin-left: 20px;">
+            <i><b>Liste des saisons :</b></i>
+        </div>
+
+        <div style="margin: 20px">
+            
+            <div class="list">
+                <div ng-repeat="s in info.seasons"
+                    ui-sref=".season({ season: s.season_number })">
+                    <div class="item item-thumbnail-left item-button-right">
+                        <img src="{{s.poster_path}}"  style="object-fit: contain;">
+                        <h2>Saison {{s.season_number}}</h2>
+                        <button class="button button-clear">
+                            <i class="icon ion-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

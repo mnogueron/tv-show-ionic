@@ -1,0 +1,42 @@
+<ion-view view-title="Episode {{episode.episode}}">
+    <ion-content>
+        <div style="margin: 20px; text-align: center;">
+            <h2>{{episode.content.name}}</h2>
+            <div ng-bind-html="episode.content.backdrop_path"></div>
+            </br>
+            {{episode.content.overview}}
+        </div>
+
+        <div style="margin-left: 20px;">
+            <i><b>Production :</b></i>
+        </div>
+
+        <div style="margin: 20px">
+            <div class="list">
+                <div ng-repeat="p in episode.content.crew">
+                    <div class="item item-thumbnail-left item-button-right">
+                        <img src="{{p.profile_path}}" style="object-fit: contain;">
+                        <h2>{{p.name}}</h2>
+                        <h3>Rôle : {{p.job}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-left: 20px;">
+            <i><b>Guests :</b></i>
+        </div>
+
+        <div style="margin: 20px">
+            <div class="list">
+                <div ng-repeat="g in episode.content.guest_stars">
+                    <div class="item item-thumbnail-left item-button-right">
+                        <img src="{{g.profile_path}}" style="object-fit: contain;">
+                        <h2>{{g.name}}</h2>
+                        <h3><b>Rôle : {{g.character}}</b></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

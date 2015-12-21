@@ -1,0 +1,16 @@
+<ion-view view-title="Saison {{season.number}}">
+    <ion-content>
+        <div class="list">
+            <div ng-repeat="e in season.data.episodes"
+                ui-sref=".episode({ episode: e.episode_number })">
+                <div class="item item-thumbnail-left item-button-right">
+                    <img src="{{e.still_path}}" style="object-fit: contain;">
+                    <h2>Episode {{e.episode_number}}</h2>
+                    <button class="button button-clear">
+                        <i class="icon ion-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

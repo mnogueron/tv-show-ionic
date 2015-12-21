@@ -1,0 +1,14 @@
+{
+  "name": "gator",
+  "homepage": "https://github.com/ccampbell/gator",
+  "version": "1.2.4",
+  "_release": "1.2.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.2.4",
+    "commit": "c864b70b8ed4c1818631d893091a7bbb00726677"
+  },
+  "_source": "git://github.com/ccampbell/gator.git",
+  "_target": "1.2.4",
+  "_originalSource": "ccampbell/gator"
+}
