@@ -203,7 +203,7 @@ rules:
   no-ternary: 0
   no-trailing-spaces: 2
   no-underscore-dangle: 0
-  no-wrap-func: 2
+  nowrap-func: 2
   one-var:
     - 2
     - "never"
