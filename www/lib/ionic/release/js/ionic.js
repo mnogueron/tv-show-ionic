@@ -4303,7 +4303,7 @@ function viewportUpdate() {
           viewportProperties.height = '0';
 
         } else if (version == 7) {
-          // iPad <= 7.0 WebView Portait
+          // iPad <= 7.0 WebView Portrait
           viewportProperties.height = DEVICE_HEIGHT;
         }
       } else {
