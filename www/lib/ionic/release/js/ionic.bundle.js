@@ -638,7 +638,7 @@ window.ionic.version = '1.1.1';
   // default settings
   ionic.Gestures.defaults = {
     // add css to the element to prevent the browser from doing
-    // its native behavior. this doesnt prevent the scrolling,
+    // its native behavior. this doesn't prevent the scrolling,
     // but cancels the contextmenu, tap highlighting etc
     // set to false to disable this
     stop_browser_behavior: 'disable-user-behavior'
@@ -1601,7 +1601,7 @@ window.ionic.version = '1.1.1';
    *
    * after the gesture detection session has been completed (user has released the screen)
    * the ionic.Gestures.detectionic.current object is copied into ionic.Gestures.detectionic.previous,
-   * this is usefull for gestures like doubletap, where you need to know if the
+   * this is useful for gestures like doubletap, where you need to know if the
    * previous gesture was a tap
    *
    * options that have been set by the instance can be received by calling inst.options
@@ -2108,7 +2108,7 @@ window.ionic.version = '1.1.1';
      * @description
      * Trigger a callback once the device is ready, or immediately
      * if the device is already ready. This method can be run from
-     * anywhere and does not need to be wrapped by any additonal methods.
+     * anywhere and does not need to be wrapped by any additional methods.
      * When the app is within a WebView (Cordova), it'll fire
      * the callback once the device is ready. If the app is within
      * a web browser, it'll fire the callback after `window.load`.
@@ -4310,7 +4310,7 @@ function viewportUpdate() {
           viewportProperties.height = '0';
 
         } else if (version == 7) {
-          // iPad <= 7.0 WebView Portait
+          // iPad <= 7.0 WebView Portrait
           viewportProperties.height = DEVICE_HEIGHT;
         }
       } else {
@@ -13365,7 +13365,7 @@ function $AnchorScrollProvider() {
    *
    * `yOffset` can be specified in various ways:
    * - **number**: A fixed number of pixels to be used as offset.<br /><br />
-   * - **function**: A getter function called everytime `$anchorScroll()` is executed. Must return
+   * - **function**: A getter function called every time `$anchorScroll()` is executed. Must return
    *   a number representing the offset (in pixels).<br /><br />
    * - **jqLite**: A jqLite/jQuery element to be used for specifying the offset. The distance from
    *   the top of the page to the element's bottom will be used as offset.<br />
@@ -18954,7 +18954,7 @@ function $HttpProvider() {
 
         defHeaders = extend({}, defHeaders.common, defHeaders[lowercase(config.method)]);
 
-        // using for-in instead of forEach to avoid unecessary iteration after header has been found
+        // using for-in instead of forEach to avoid unnecessary iteration after header has been found
         defaultHeadersIteration:
         for (defHeaderName in defHeaders) {
           lowercaseDefHeaderName = lowercase(defHeaderName);
@@ -36889,7 +36889,7 @@ var SelectController =
  *
  * <div class="alert alert-info">
  * The value of a `select` directive used without `ngOptions` is always a string.
- * When the model needs to be bound to a non-string value, you must either explictly convert it
+ * When the model needs to be bound to a non-string value, you must either explicitly convert it
  * using a directive (see example below) or use `ngOptions` to specify the set of options.
  * This is because an option element can only be bound to string values at present.
  * </div>
@@ -37732,7 +37732,7 @@ var $$AnimateChildrenDirective = [function() {
  * ({@link ngAnimate#css-staggering-animations Click here to learn how CSS-based staggering works in ngAnimate.})
  * * `staggerIndex` - The numeric index representing the stagger item (e.g. a value of 5 is equal to the sixth item in the stagger; therefore when a
  * `stagger` option value of `0.1` is used then there will be a stagger delay of `600ms`)
- * `applyClassesEarly` - Whether or not the classes being added or removed will be used when detecting the animation. This is set by `$animate` when enter/leave/move animations are fired to ensure that the CSS classes are resolved in time. (Note that this will prevent any transitions from occuring on the classes being added and removed.)
+ * `applyClassesEarly` - Whether or not the classes being added or removed will be used when detecting the animation. This is set by `$animate` when enter/leave/move animations are fired to ensure that the CSS classes are resolved in time. (Note that this will prevent any transitions from occurring on the classes being added and removed.)
  *
  * @return {object} an object with start and end methods and details about the animation.
  *
@@ -38347,7 +38347,7 @@ var $AnimateCssProvider = ['$animateProvider', function($animateProvider) {
           }
         };
 
-        // checking the stagger duration prevents an accidently cascade of the CSS delay style
+        // checking the stagger duration prevents an accidentally cascade of the CSS delay style
         // being inherited from the parent. If the transition duration is zero then we can safely
         // rely that the delay value is an intential stagger delay style.
         var maxStagger = itemIndex > 0
@@ -44273,7 +44273,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    *
    * Callback function for when a state is entered. Good way
    *   to trigger an action or dispatch an event, such as opening a dialog.
-   * If minifying your scripts, make sure to explictly annotate this function,
+   * If minifying your scripts, make sure to explicitly annotate this function,
    * because it won't be automatically annotated by your build tools.
    *
    * <pre>onEnter: function(MyService, $stateParams) {
@@ -44285,7 +44285,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    *
    * Callback function for when a state is exited. Good way to
    *   trigger an action or dispatch an event, such as opening a dialog.
-   * If minifying your scripts, make sure to explictly annotate this function,
+   * If minifying your scripts, make sure to explicitly annotate this function,
    * because it won't be automatically annotated by your build tools.
    *
    * <pre>onExit: function(MyService, $stateParams) {
@@ -44369,7 +44369,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    *   There are three squash settings:
    *
    *     - false: The parameter's default value is not squashed.  It is encoded and included in the URL
-   *     - true: The parameter's default value is omitted from the URL.  If the parameter is preceeded and followed
+   *     - true: The parameter's default value is omitted from the URL.  If the parameter is preceded and followed
    *       by slashes in the state's `url` declaration, then one of those slashes are omitted.
    *       This can allow for cleaner looking URLs.
    *     - `"<arbitrary string>"`: The parameter's default value is replaced with an arbitrary placeholder of  your choice.
@@ -54149,7 +54149,7 @@ function($scope, $element, $attrs, $compile, $rootScope) {
   };
 
   self.beforeEnter = function(ev, transData) {
-    // this event was emitted, starting at intial ion-view, then bubbles up
+    // this event was emitted, starting at initial ion-view, then bubbles up
     // only the first ion-view should do something with it, parent ion-views should ignore
     if (transData && !transData.viewNotified) {
       transData.viewNotified = true;

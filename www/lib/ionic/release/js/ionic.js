@@ -631,7 +631,7 @@ window.ionic.version = '1.1.1';
   // default settings
   ionic.Gestures.defaults = {
     // add css to the element to prevent the browser from doing
-    // its native behavior. this doesnt prevent the scrolling,
+    // its native behavior. this doesn't prevent the scrolling,
     // but cancels the contextmenu, tap highlighting etc
     // set to false to disable this
     stop_browser_behavior: 'disable-user-behavior'
@@ -1594,7 +1594,7 @@ window.ionic.version = '1.1.1';
    *
    * after the gesture detection session has been completed (user has released the screen)
    * the ionic.Gestures.detectionic.current object is copied into ionic.Gestures.detectionic.previous,
-   * this is usefull for gestures like doubletap, where you need to know if the
+   * this is useful for gestures like doubletap, where you need to know if the
    * previous gesture was a tap
    *
    * options that have been set by the instance can be received by calling inst.options
@@ -2101,7 +2101,7 @@ window.ionic.version = '1.1.1';
      * @description
      * Trigger a callback once the device is ready, or immediately
      * if the device is already ready. This method can be run from
-     * anywhere and does not need to be wrapped by any additonal methods.
+     * anywhere and does not need to be wrapped by any additional methods.
      * When the app is within a WebView (Cordova), it'll fire
      * the callback once the device is ready. If the app is within
      * a web browser, it'll fire the callback after `window.load`.
@@ -4303,7 +4303,7 @@ function viewportUpdate() {
           viewportProperties.height = '0';
 
         } else if (version == 7) {
-          // iPad <= 7.0 WebView Portait
+          // iPad <= 7.0 WebView Portrait
           viewportProperties.height = DEVICE_HEIGHT;
         }
       } else {
